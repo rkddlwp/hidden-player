@@ -1,0 +1,137 @@
+@import "mainFrame__block.css";
+
+body {
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.music1 {
+  background: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.music1:hover {
+  transform: scale(1.5);
+}
+
+.music2:hover {
+  transform: scale(1.5);
+}
+
+.music2 {
+  background: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.TitleOfThis {
+  position: absolute;
+  top: 10px;
+}
+.MU {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+img {
+  z-index: -2;
+}
+.mainFrame {
+  position: absolute;
+  width: 700px;
+  height: 600px;
+  margin-bottom: 3px;
+  background-size: 100% 100%;
+}
+
+.mainFrame div:hover {
+  z-index: 10;
+  transform: scale(1.2);
+}
+
+.answerForm {
+  position: absolute;
+  bottom: 7px;
+}
+.answerInput {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.answerInput::placeholder {
+  opacity: 0.5;
+}
+.answerInput:focus {
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.answerInput:focus::placeholder {
+  opacity: 0;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.wrong {
+  background-color: gray;
+  opacity: 0.4;
+  color: red;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 400px;
+  animation: hideSplashScreen 0.9s ease-in-out forwards;
+  /* animation-delay: 1.5s; */
+}
+.right {
+  background-color: gray;
+  opacity: 0.4;
+  color: blue;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 400px;
+  animation: hideSplashScreen 0.9s ease-in-out forwards;
+  /* animation-delay: 1.5s; */
+}

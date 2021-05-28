@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="playPage.css" />
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png" />
+    <title>playPage</title>
+  </head>
+  <body>
+    <!-- <audio src="medias/bg.mp3" autoplay loop></audio> -->
+    <h2 class="TitleOfThis">Hidden Player</h2>
+    <img class="MU" src="medias/MU.png" />
+    <input class="music1" type="button" onclick="audio.play();" value="🔈" />
+    <!--재생-->
+    <input class="music2" type="button" onclick="audio.pause();" value="🔇" />
+    <!--일시정지-->
+    <div class="mainFrame"></div>
+    <form class="answerForm">
+      <input class="answerInput" type="text" placeholder="Guess Who.." />
+    </form>
+    <script src="playBlock.js"></script>
+    <script type="module" src="playerImg.js"></script>
+    <script>
+      var audio = new Audio("medias/bg.mp3");
+    </script>
+  </body>
+</html>
