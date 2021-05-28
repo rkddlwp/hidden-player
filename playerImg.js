@@ -18,7 +18,6 @@ function genRandom() {
   }
   else{
     checkNumber.push(number);
-    console.log(checkNumber)
     return number;
   }
   
@@ -44,7 +43,6 @@ async function paintImage(imgNumber) {
   const image = new Image() ; // = document.createElement("img")
   image.src = await `${data[imgNumber].img}`;
   name = (`${data[imgNumber].name}`);
-  console.log(name )
   image.setAttribute("class", "mainFrame");
   image.classList.add("bgImage");
   body.appendChild(image);
@@ -76,6 +74,7 @@ function checkIt(event){
     xscreen.innerText += 'X';
     body.appendChild(xscreen);
   }
+  event.target[0].value = ""
 }
 
 answer.addEventListener("submit", checkIt)
