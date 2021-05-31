@@ -6,21 +6,30 @@ const answer = document.querySelector(".answerForm");
 const IMG_NUMBER = 40;
 var checkNumber = [];
 
-// for(var i = 0; i <= IMG_NUMBER; i++){
+// for(var i = 0; i <= IMG_NUMBER; i++){         // 
 //   checkNumber.push(i)
 // }
 
-
-function genRandom() {
-  var number = Math.floor(Math.random() * IMG_NUMBER);
-  if(checkNumber.includes(number)){
-    genRandom();
-  }
-  else{
-    checkNumber.push(number);
-    return number;
-  }
   
+function genRandom() {
+  let number = Math.floor(Math.random() * IMG_NUMBER); 
+
+  while(checkNumber.includes(number)){                     // 고친 코드 ㅎㅎㅎㅎㅎ
+     number = Math.floor(Math.random() * IMG_NUMBER);
+  }
+  checkNumber.push(number);
+  return number;
+
+
+  // if(checkNumber.includes(number)){                // 원래 코드 왜 안됐을까?
+  //   genRandom();
+  // }
+  // else{
+  //   checkNumber.push(number);
+  //   return number;
+  // }
+  
+
   // for(var i = 0; i <= data.length; i++){
   //   if(number == i){
   //     data.slice(i, 1)
@@ -39,9 +48,9 @@ function genRandom() {
   // return number; 
 }
 
-async function paintImage(imgNumber) {
-  const image = new Image() ; // = document.createElement("img")
-  image.src = await `${data[imgNumber].img}`;
+function paintImage(imgNumber) {
+  const image = new Image(700, 600) ;
+  image.src = `${data[imgNumber].img}`;
   name = (`${data[imgNumber].name}`);
   image.setAttribute("class", "mainFrame");
   image.classList.add("bgImage");
@@ -50,7 +59,9 @@ async function paintImage(imgNumber) {
 
 function init() {
   var randomNumber =genRandom();
-  paintImage(randomNumber);
+  setTimeout(() => {
+    paintImage(randomNumber);
+  }, 300);
 }
 
 function checkIt(event){
