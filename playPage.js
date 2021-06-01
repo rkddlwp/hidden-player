@@ -5,7 +5,7 @@ const answer = document.querySelector(".answerForm");
 const scoreSpan = document.querySelector(".score");
 const timeSpan = document.querySelector(".time");
 
-let time = 30;
+let time = 100;
 let score = 0;
 const IMG_NUMBER = 40;
 let checkNumber = [];
