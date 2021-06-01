@@ -37,7 +37,7 @@ body {
   height: 50px;
   border-radius: 50%;
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 10px;
   font-size: 40px;
   cursor: pointer;
@@ -46,6 +46,37 @@ body {
 .TitleOfThis {
   position: absolute;
   top: 10px;
+}
+
+.score {
+  position: absolute;
+  top: 30px;
+  right: 600px;
+  width: 170px;
+  height: 45px;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  font-size: 27px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time {
+  position: absolute;
+  top: 30px;
+  right: 1150px;
+  width: 170px;
+  height: 47px;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  font-size: 27px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .MU {
   width: 200px;

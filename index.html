@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="playPage.css" />
     <link rel="icon" type="image/png" href="http://example.com/myicon.png" />
-    <title>playPage</title>
+    <title>HiddenPlayer</title>
   </head>
   <body>
-    <!-- <audio src="medias/bg.mp3" autoplay loop></audio> -->
     <h2 class="TitleOfThis">Hidden Player</h2>
+    <span class="time"></span>
+    <span class="score"></span>
     <img class="MU" src="medias/MU.png" />
     <input class="music1" type="button" onclick="audio.play();" value="🔈" />
     <!--재생-->
@@ -20,7 +21,7 @@
       <input class="answerInput" type="text" placeholder="Guess Who.." />
     </form>
     <script src="playBlock.js"></script>
-    <script type="module" src="playerImg.js"></script>
+    <script type="module" src="playPage.js"></script>
     <script>
       var audio = new Audio("medias/bg.mp3");
     </script>
